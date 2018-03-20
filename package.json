@@ -1,0 +1,28 @@
+{
+  "name": "jest-runner-babel",
+  "version": "0.0.1",
+  "description": "Babel runner for Jest",
+  "main": "index.js",
+  "repository": "git@github.com:rickhanlonii/jest-runner-babel.git",
+  "author": "rickhanlonii <rickhanlonii@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "prettier": "prettier --write **/**.js **/**.md"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "cli-highlight": "^1.2.3",
+    "cosmiconfig": "^4.0.0",
+    "create-jest-runner": "^0.2.0",
+    "jest": "^22.4.2",
+    "jest-diff": "^22.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.11.1"
+  },
+  "jest-runner-babel": {
+    "outDir": "lib",
+    "babel": {}
+  }
+}
