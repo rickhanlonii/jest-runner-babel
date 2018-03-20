@@ -1,5 +1,3 @@
 .prettierrc
-index.js
 jest.config.js
-run.js
 yarn.lock

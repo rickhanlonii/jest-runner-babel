@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-babel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Babel runner for Jest",
   "main": "index.js",
   "repository": "git@github.com:rickhanlonii/jest-runner-babel.git",
