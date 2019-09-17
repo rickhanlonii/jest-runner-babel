@@ -98,9 +98,10 @@ module.exports = async ({ testPath, config }) => {
     runnerConfig.outDir,
     ...outs.file.filter(Boolean)
   );
-  const outDir = path.dirname(outFile);
+
   const filename = path.basename(outFile, path.extname(outFile));
 
+  const outDir = path.dirname(outFile);
   outFile = path.join(outDir, `${filename}.js`);
 
   fs.mkdirSync(outDir, { recursive: true });
