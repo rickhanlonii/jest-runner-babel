@@ -1,9 +1,9 @@
 const path = require('path');
 const fs = require('fs');
-const { pass } = require("create-jest-runner");
-const babel = require("babel-core");
-const cosmiconfig = require("cosmiconfig");
-const explorer = cosmiconfig("jest-runner-babel");
+const { pass } = require('create-jest-runner');
+const babel = require('babel-core');
+const cosmiconfig = require('cosmiconfig');
+const explorer = cosmiconfig('jest-runner-babel');
 const mkdirp = require('mkdirp');
 
 module.exports = ({ testPath, config }) => {
@@ -12,7 +12,10 @@ module.exports = ({ testPath, config }) => {
     .load(config.rootDir)
     .then(explorer => {
       const runnerConfig = explorer.config;
-      const result = babel.transformFileSync(testPath, runnerConfig.babel || {});
+      const result = babel.transformFileSync(
+        testPath,
+        runnerConfig.babel || {}
+      );
 
       if (runnerConfig.outDir) {
         // LMAO do this smarter
@@ -22,13 +25,12 @@ module.exports = ({ testPath, config }) => {
 
         mkdirp.sync(outPath);
         fs.writeFileSync(outFile, result.code);
-
       }
 
       return pass({
         start,
         end: new Date(),
-        test: { path: testPath }
+        test: { path: testPath },
       });
     })
     .catch(parsingError => {
