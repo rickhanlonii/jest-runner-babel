@@ -1,12 +1,7 @@
 module.exports = {
-  runner: "./index.js",
-  displayName: "babel",
-  moduleFileExtensions: [
-    "js",
-  ],
-  testMatch: [
-    "<rootDir>/index.js",
-    "<rootDir>/run.js",
-  ],
-  modulePathIgnorePatterns: [ '/node_modules/', '/lib/' ],
+  runner: './index.js',
+  displayName: 'babel',
+  moduleFileExtensions: ['js'],
+  testMatch: ['<rootDir>/*.js'],
+  modulePathIgnorePatterns: ['/node_modules/', '/lib/', 'jest.config.js'],
 };
