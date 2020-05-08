@@ -14,10 +14,12 @@
     "@babel/core": "^7.6.0",
     "cosmiconfig": "^5.2.1",
     "create-jest-runner": "^0.5.3",
-    "jest": "^24.9.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "jest": "*"
   },
   "jest-runner-babel": {
     "outDir": "lib",
